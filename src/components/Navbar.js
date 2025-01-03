@@ -1,16 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import 'C:/Users/Sohum Srivastava/Desktop/afsacademy/afsacademy/src/styles/Navbar.css';
 
 const Navbar = () => {
   return (
     <nav>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/batches">Batches</Link></li>
-        <li><Link to="/collaborations">Collaborations</Link></li>
-        <li><Link to="/team">Team</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-      </ul>
+      <h1>AFS Academy</h1>
+      <div>
+        <a href="/">Home</a>
+        <a href="/batches">Batches</a>
+        <a href="/collaborations">Collaborations</a>
+        <a href="/team">Team</a>
+        <a href="/contact">Contact</a>
+      </div>
     </nav>
   );
 };

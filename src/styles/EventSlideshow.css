@@ -1,0 +1,14 @@
+.slideshow {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .slideshow img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  

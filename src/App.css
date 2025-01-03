@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #ff8c00; /* Bright orange */
+  --secondary-color: #000000; /* Black */
+  --text-color: #ffffff; /* White */
+  --background-color: #1a1a1a; /* Dark gray for a smooth black effect */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover {
+  text-decoration: underline;
+}
+
+header, nav {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 1rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+nav a {
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e67600; /* Slightly darker orange for hover */
+}
+
+.slideshow {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: pink;
+  align-items: center;
+  height: 300px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
 }
