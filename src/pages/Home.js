@@ -9,7 +9,7 @@ const events = [
 const Home = () => {
   return (
     <div>
-      <h1>Welcome to Our Basketball Coaching</h1>
+      <h1>is good</h1>
       <EventSlideshow events={events} />
     </div>
   );

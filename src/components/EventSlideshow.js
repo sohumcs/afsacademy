@@ -7,7 +7,7 @@ const EventSlideshow = ({ events }) => {
         <div key={index} className="event-card">
           <h3>{event.title}</h3>
           <p>{event.date}</p>
-          <button onClick={() => window.open(event.link, '_blank')}>Enroll</button>
+          <button onClick={() => window.open(event.link, '_blank')}>Enrol</button>
         </div>
       ))}
     </div>
