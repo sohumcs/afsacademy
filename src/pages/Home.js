@@ -9,7 +9,7 @@ const events = [
 const Home = () => {
   return (
     <div>
-      <h1>is good</h1>
+      <h1>Sandhya Singh ke chutiya bacche</h1>
       <EventSlideshow events={events} />
     </div>
   );
