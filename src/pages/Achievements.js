@@ -1,5 +1,5 @@
 import React from 'react';
-import 'C:/Users/ASUS/Desktop/afsacademy/afsacademy/src/styles/Achievements.css';
+import 'C:/Users/Sohum Srivastava/Desktop/afsacademy/afsacademy/src/styles/Achievements.css';
 
 const Achievements = () => {
   const achievements = [
