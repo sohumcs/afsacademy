@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'C:/Users/Sohum Srivastava/Desktop/afsacademy/afsacademy/src/styles/Contact.css'; // Import the CSS file for styling
+import 'C:/Users/ASUS/Desktop/afsacademy/afsacademy/src/styles/Contact.css'; // Import the CSS file for styling
 import emailjs from 'emailjs-com'; // Import EmailJS
 
 const ContactForm = () => {
