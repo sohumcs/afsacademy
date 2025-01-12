@@ -1,20 +1,43 @@
-import React from 'react';
+import React from "react";
+import "C:/Users/ASUS/Desktop/afsacademy/afsacademy/src/pages/Team.js";
 
 const Team = () => {
-  const students = [
-    { name: 'John Doe', performance: 'Excellent' },
-    { name: 'Jane Smith', performance: 'Good' },
-  ];
-
   return (
-    <div>
-      <h1>Our Team</h1>
-      {students.map((student, index) => (
-        <div key={index}>
-          <h3>{student.name}</h3>
-          <p>Performance: {student.performance}</p>
+    <div className="team-container">
+      <div className="team-member">
+        <div className="team-details">
+          <h2>Ashwani Kumar Gupta</h2>
+          <h3>Professional Athlete & Trainer</h3>
+          <p className="section-heading">Achievements:</p>
+          <ul>
+            <li>
+              <strong>Basketball (National Level):</strong> Competed in multiple Senior and Junior National Championships, including the Khelo India Youth Games (Bronze Medalist).
+            </li>
+            <li>
+              <strong>Basketball (State Level):</strong> Medalist in Senior State Championships; guided teams in Uttar Pradesh Basketball Championships.
+            </li>
+            <li>
+              <strong>Volleyball (State Level):</strong> Competed in Junior and Senior State Volleyball Championships.
+            </li>
+          </ul>
+          <p className="section-heading">Experience:</p>
+          <ul>
+            <li>
+              <strong>Basketball Coach:</strong> NIS Bangalore (SAI) & Loyola International School.
+            </li>
+            <li>Currently Head Coach at AFS Training Academy, Lucknow.</li>
+            <li>
+              Guided Lucknow teams to significant achievements in Under-17 and Under-19 State Championships.
+            </li>
+            <li>
+              Coached teams at Sainik School and Central Academy, creating strong basketball programs.
+            </li>
+          </ul>
         </div>
-      ))}
+        <div className="team-image">
+          <img src="C:\Users\ASUS\Desktop\afsacademy\afsacademy\src\media\pfp1.jpg" alt="Ashwani Kumar Gupta" />
+        </div>
+      </div>
     </div>
   );
 };
