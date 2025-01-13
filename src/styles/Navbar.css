@@ -1,0 +1,104 @@
+/* Navbar.css */
+
+/* General Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0f0ff;
+  color: var(--text-color);
+  padding: 1rem 2rem;
+  border-radius: 15px; /* Adjusted to give rounded corners */
+  margin: 20px 30px; /* Leaves space on top and sides */
+  box-shadow: 0 2px 4px var(--card-shadow-color);
+}
+
+/* Left Section (Logo) */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo Styling */
+.navbar-logo {
+  height: 50px; /* Adjust height as needed */
+  width: auto;
+  border-radius: 50%; /* Makes the logo circular (if desired) */
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Theme Toggle Switch Styles */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px; /* Rounded slider */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'C:/Users/ASUS/Desktop/afsacademy/afsacademy/src/styles/Contact.css'; // Import the CSS file for styling
+import '../styles/Contact.css'; // Import the CSS file for styling
 import emailjs from 'emailjs-com'; // Import EmailJS
 
 const ContactForm = () => {
@@ -37,22 +37,25 @@ const ContactForm = () => {
     setErrorMessage('');
 
     // Sending the email using EmailJS
-    emailjs
-      .send('service_s64ay2d', 'template_2z127sk', formData, '1N7ZmBaX1ACqQHQih')
-      .then((response) => {
-        alert('Form submitted successfully!');
-        // Reset the form after successful submission
-        setFormData({
-          firstName: '',
-          lastName: '',
-          mobile: '',
-          email: '',
-          reason: ''
-        });
-      })
-      .catch((error) => {
-        alert('There was an error. Please try again.');
+    try {
+      await emailjs.send(
+        'service_s64ay2d', // Replace with your service ID
+        'template_2z127sk', // Replace with your template ID
+        formData,
+        '1N7ZmBaX1ACqQHQih' // Replace with your user ID
+      );
+      alert('Form submitted successfully!');
+      // Reset the form after successful submission
+      setFormData({
+        firstName: '',
+        lastName: '',
+        mobile: '',
+        email: '',
+        reason: ''
       });
+    } catch (error) {
+      alert('There was an error. Please try again.');
+    }
   };
 
   return (

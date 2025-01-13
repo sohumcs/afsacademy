@@ -1,0 +1,178 @@
+/* General Styling */
+
+.home-container {
+  font-family: Arial, sans-serif;
+  color: #003366;
+  background: linear-gradient(135deg, #005AAA, #87CEFA); /* Gradient Background */
+}
+
+/* Quote Section */
+.quote-section {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  background-color: #e0f0ff;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.quote-text {
+  flex: 2;
+  padding-right: 20px;
+}
+
+.quote-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007acc;
+  margin-bottom: 15px;
+}
+
+.quote-text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.coach-photo {
+  flex: 1;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+/* Collaborations Section */
+.collaborations-section {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #005AAA, #1E90FF); /* Gradient */
+}
+
+.collaborations-section h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.collaborations {
+  display: flex;
+  justify-content: space-around;
+}
+
+.collab-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  text-align: center;
+}
+
+/* Location Section */
+.location-section {
+  padding: 40px;
+  background-color: #e0f0ff;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.location-section h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #007acc;
+}
+
+/* Map and Address Layout */
+.location-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.location-row {
+  display: flex;
+  align-items: stretch;
+  gap: 20px; /* Adds space between the map and text */
+}
+
+.address-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.address-container li {
+  margin-bottom: 15px; /* Adds space between each address */
+}
+
+.map-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.map-container {
+  flex: 2;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.address-container {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.address-container h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.address-container p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 5px 0;
+  color: #003366;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #003366, #005AAA); /* Footer Gradient */
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-links,
+.footer-contact {
+  flex: 1;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}

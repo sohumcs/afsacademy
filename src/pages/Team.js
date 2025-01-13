@@ -1,5 +1,5 @@
 import React from "react";
-import "C:/Users/ASUS/Desktop/afsacademy/afsacademy/src/pages/Team.js";
+import "C:/Users/Sohum Srivastava/Desktop/afsacademy/afsacademy/src/pages/Team.js";
 
 const Team = () => {
   return (
