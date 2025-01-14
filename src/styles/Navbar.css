@@ -11,6 +11,9 @@
   border-radius: 15px; /* Adjusted to give rounded corners */
   margin: 20px 30px; /* Leaves space on top and sides */
   box-shadow: 0 2px 4px var(--card-shadow-color);
+    
+  
+  
 }
 
 /* Left Section (Logo) */

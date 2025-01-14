@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/EventSlideshow.css";
-import eventVideo1 from "C:/Users/Sohum Srivastava/Desktop/afsacademy/afsacademy/src/media/WhatsApp Video 2025-01-06 at 22.16.11_2ea6aec4.mp4";
-import eventVideo2 from "C:/Users/Sohum Srivastava/Desktop/afsacademy/afsacademy/src/media/basketballssss_p3.mp4";
-import eventVideo3 from "C:/Users/Sohum Srivastava/Desktop/afsacademy/afsacademy/src/media/basketballssss.mp4";
-import eventVideo4 from "C:/Users/Sohum Srivastava/Desktop/afsacademy/afsacademy/src/media/basketballssss_2.mp4";
-import eventImage from "C:/Users/Sohum Srivastava/Desktop/afsacademy/afsacademy/src/media/WhatsApp Image 2025-01-06 at 22.06.47_db40da2b.jpg";
+import eventVideo1 from "C:/Users/ASUS/Desktop/afsacademy/afsacademy/src/media/WhatsApp Video 2025-01-06 at 22.16.11_2ea6aec4.mp4";
+import eventVideo2 from "C:/Users/ASUS/Desktop/afsacademy/afsacademy/src/media/basketballssss_p3.mp4";
+import eventVideo3 from "C:/Users/ASUS/Desktop/afsacademy/afsacademy/src/media/basketballssss.mp4";
+import eventVideo4 from "C:/Users/ASUS/Desktop/afsacademy/afsacademy/src/media/basketballssss_2.mp4"; // New Video
+import eventImage from "C:/Users/ASUS/Desktop/afsacademy/afsacademy/src/media/WhatsApp Image 2025-01-06 at 22.06.47_db40da2b.jpg";
 
 const EventSlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -28,7 +28,7 @@ const EventSlideshow = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  // Handle video autoplay and image duration
+  // Handle video end event
   useEffect(() => {
     if (slides[currentSlide].type === "video") {
       const video = videoRefs.current[currentSlide];
@@ -39,7 +39,7 @@ const EventSlideshow = () => {
         return () => video.removeEventListener("ended", onVideoEnd);
       }
     } else {
-      const imageDuration = 5000; // Display image for 5 seconds
+      const imageDuration = 5000; // Show image for 5 seconds
       const timer = setTimeout(handleNextSlide, imageDuration);
       return () => clearTimeout(timer);
     }
@@ -49,7 +49,7 @@ const EventSlideshow = () => {
     <div className="slideshow-container">
       <div className="slideshow">
         {slides.map((slide, index) => {
-          // Calculate position of the slide
+          // Determine the slide position
           const position =
             index === currentSlide
               ? "current"
@@ -77,7 +77,7 @@ const EventSlideshow = () => {
           );
         })}
 
-        {/* Navigation Buttons */}
+        {/* Navigation */}
         <button
           className="slide-control previous"
           onClick={handlePrevSlide}

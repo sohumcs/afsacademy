@@ -1,77 +1,73 @@
-/* Slideshow Container */
 .slideshow-container {
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
-  overflow: hidden;
-  padding: 20px;
-}
-
-/* Slideshow */
-.slideshow {
   position: relative;
+  overflow: hidden;
+    margin-bottom: 50px; /* Add spacing below */
+      z-index: 1; /* Lower than navbar */
+    
+  
+}
+
+.slideshow {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  max-width: 1200px;
-  height: 600px;
-  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-/* Slides */
 .slide {
   position: absolute;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  width: 60%; /* Central slide width */
   opacity: 0;
-  transform: scale(0.8);
-  border-radius: 15px;
+  transform: scale(0.8) translateX(100%);
 }
 
 .slide.current {
-  transform: scale(1);
   opacity: 1;
+  transform: scale(1) translateX(0);
+  z-index: 3;
+}
+
+.slide.previous {
+  opacity: 0.6;
+  transform: scale(0.8) translateX(-100%);
   z-index: 2;
 }
 
-.slide.previous,
 .slide.next {
-  transform: scale(0.9);
   opacity: 0.6;
-  z-index: 1;
+  transform: scale(0.8) translateX(100%);
+  z-index: 2;
 }
 
-.slide.hidden {
-  transform: scale(0.7);
-  opacity: 0;
-}
-
-/* Video and Image Styles */
 .video-slide,
 .image-slide {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
-/* Navigation Buttons */
 .slide-control {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
   border: none;
-  color: #007acc;
-  font-size: 30px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
   cursor: pointer;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.slide-control:hover {
-  opacity: 1;
+  z-index: 4;
 }
 
 .slide-control.previous {
@@ -80,4 +76,8 @@
 
 .slide-control.next {
   right: 10px;
+}
+
+.slide-control:hover {
+  background: rgba(0, 0, 0, 0.8);
 }

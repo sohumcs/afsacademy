@@ -4,6 +4,9 @@
   font-family: Arial, sans-serif;
   color: #003366;
   background: linear-gradient(135deg, #005AAA, #87CEFA); /* Gradient Background */
+    padding-top: 80px; /* Adjust this value based on your navbar height */
+  
+  
 }
 
 /* Quote Section */

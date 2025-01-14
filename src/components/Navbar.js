@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Use Link for navigation
 import '../styles/Navbar.css';
-import logo from "C:/Users/Sohum Srivastava/Desktop/afsacademy/afsacademy/src/media/logo.jpg";
+import logo from "C:/Users/ASUS/Desktop/afsacademy/afsacademy/src/media/logo.jpg";
 
 const Navbar = ({ toggleTheme, theme }) => {
   return (
@@ -17,6 +17,7 @@ const Navbar = ({ toggleTheme, theme }) => {
       <div className="navbar-links">
         <Link to="/batches">Batches</Link>
         <Link to="/team">Team</Link>
+        <li><Link to="/achievements">Achievements</Link></li>
         <Link to="/contact">Contact</Link>
       </div>
     </nav>
