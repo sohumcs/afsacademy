@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import EventSlideshow from "../components/EventSlideshow";
 import "../styles/Home.css";
 import coachPhoto from "../media/coach_photo.jpg";
+
+
 
 const events = [
   { title: "Basketball Workshop", date: "2025-01-15", link: "https://forms.gle/example" },
@@ -21,6 +23,7 @@ const locations = [
     position: { lat: 26.863723, lng: 81.013634 },
     address: "Eldeco Elegance, Basketball Court, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010",
   },
+  // Other locations...
   {
     title: "Sky Line Plaza",
     position: { lat: 26.7919, lng: 81.0248 },
@@ -54,6 +57,10 @@ const locations = [
 ];
 
 const Home = () => {
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [fade, setFade] = useState(false);
+  
+
   return (
     <div className="home-container">
       {/* Event Slideshow */}
@@ -72,22 +79,9 @@ const Home = () => {
         <img src={coachPhoto} alt="Coach" className="coach-photo" />
       </section>
 
-      {/* Collaborations Section */}
-      <section className="collaborations-section">
-        <h3>Our Collaborations</h3>
-        <div className="collaborations">
-          <div className="collab-item">
-            <p>Collaboration 1</p>
-          </div>
-          <div className="collab-item">
-            <p>Collaboration 2</p>
-          </div>
-          <div className="collab-item">
-            <p>Collaboration 3</p>
-          </div>
-        </div>
-      </section>
+      
 
+      
       {/* Location Section */}
       <section className="location-section">
         <h3>Find Us Here</h3>
@@ -122,6 +116,44 @@ const Home = () => {
                 ))}
               </GoogleMap>
             </LoadScript>
+          </div>
+        </div>
+      </section>
+      {/* Collaborations Section */}
+      <section className="collaborations-section">
+        <h3>Our Collaborations</h3>
+        <div className="collaborations">
+          <div className="collab-item">
+            <p>Collaboration 1</p>
+          </div>
+          <div className="collab-item">
+            <p>Collaboration 2</p>
+          </div>
+          <div className="collab-item">
+            <p>Collaboration 3</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Personalized Training Section */}
+      <section className="training-section">
+        <h3>Personalized Training by Ashwani Kumar Gupta</h3>
+        <div className="training-content">
+          <div className="training-text">
+            <p>
+              Join Ashwani Kumar Gupta for personalized fitness sessions tailored to your goals.
+              Whether you're looking to lose weight, build muscle, or stay fit, we've got you
+              covered! Sessions are available both online and offline, including gym training,
+              weight loss programs, and more.
+            </p>
+            <button
+              className="book-session-button"
+              onClick={() => window.open("https://forms.gle/example", "_blank")}
+            >
+              Book a Session Now
+            </button>
+        
+          
           </div>
         </div>
       </section>

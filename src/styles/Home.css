@@ -122,6 +122,78 @@
   margin: 5px 0;
   color: #d0e7ff;
 }
+/* Personalized Training Section */
+.training-section {
+  background: linear-gradient(135deg, #00274d, #004080); /* Blue Gradient */
+  color: #d0e7ff;
+  padding: 40px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.training-section h3 {
+  font-size: 24px;
+  color: #00bfff;
+  margin-bottom: 20px;
+}
+
+.training-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.training-text {
+  flex: 1;
+}
+
+.training-text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.book-session-button {
+  background-color: #00bfff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.book-session-button:hover {
+  background-color: #008ccc;
+}
+
+.training-videos {
+  flex: 1;
+}
+
+.training-video {
+  width: 25%;
+  height: 25%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+/* Video Container Fade Animations */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
 
 /* Footer */
 .footer {
