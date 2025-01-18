@@ -2,11 +2,9 @@
 
 .home-container {
   font-family: Arial, sans-serif;
-  color: #003366;
-  background: linear-gradient(135deg, #005AAA, #87CEFA); /* Gradient Background */
-    padding-top: 80px; /* Adjust this value based on your navbar height */
-  
-  
+  color: #ffffff;
+  background: linear-gradient(135deg, #001f3f, #003366); /* Blue to Black Gradient Background */
+  padding-top: 80px; /* Adjust this value based on your navbar height */
 }
 
 /* Quote Section */
@@ -14,7 +12,7 @@
   display: flex;
   align-items: center;
   padding: 40px;
-  background-color: #e0f0ff;
+  background-color: #00274d; /* Dark Blue Background */
   border-radius: 10px;
   margin: 20px;
 }
@@ -27,26 +25,28 @@
 .quote-text h2 {
   font-size: 24px;
   font-weight: bold;
-  color: #007acc;
+  color: #00bfff; /* Bright Blue for Titles */
   margin-bottom: 15px;
 }
 
 .quote-text p {
   font-size: 16px;
   line-height: 1.6;
+  color: #d0e7ff; /* Light Blue Text */
 }
 
 .coach-photo {
   flex: 1;
   max-width: 300px;
   border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Collaborations Section */
 .collaborations-section {
   text-align: center;
   padding: 40px;
-  background: linear-gradient(135deg, #005AAA, #1E90FF); /* Gradient */
+  background: linear-gradient(135deg, #001f3f, #004080); /* Blue Gradient */
 }
 
 .collaborations-section h3 {
@@ -61,10 +61,11 @@
 }
 
 .collab-item {
-  background-color: #ffffff;
+  background-color: #003366; /* Darker Blue Background */
+  color: #ffffff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   width: 150px;
   text-align: center;
 }
@@ -72,7 +73,7 @@
 /* Location Section */
 .location-section {
   padding: 40px;
-  background-color: #e0f0ff;
+  background-color: #00274d;
   border-radius: 10px;
   margin: 20px;
 }
@@ -80,7 +81,7 @@
 .location-section h3 {
   font-size: 22px;
   margin-bottom: 20px;
-  color: #007acc;
+  color: #00bfff;
 }
 
 /* Map and Address Layout */
@@ -91,60 +92,40 @@
   gap: 20px;
 }
 
-.location-row {
-  display: flex;
-  align-items: stretch;
-  gap: 20px; /* Adds space between the map and text */
-}
-
-.address-container ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.address-container li {
-  margin-bottom: 15px; /* Adds space between each address */
-}
-
-.map-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
 .map-container {
   flex: 2;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 510px;
 }
 
 .address-container {
   flex: 1;
-  background-color: #ffffff;
+  background-color: #001f3f;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   text-align: left;
 }
 
 .address-container h4 {
   font-size: 18px;
   margin-bottom: 10px;
-  color: #003366;
+  color: #00bfff;
 }
 
 .address-container p {
   font-size: 16px;
   line-height: 1.5;
   margin: 5px 0;
-  color: #003366;
+  color: #d0e7ff;
 }
 
 /* Footer */
 .footer {
-  background: linear-gradient(135deg, #003366, #005AAA); /* Footer Gradient */
+  background: linear-gradient(135deg, #001f3f, #003366); /* Blue to Black Footer Gradient */
   color: #ffffff;
   padding: 20px;
   display: flex;
@@ -172,7 +153,7 @@
 }
 
 .footer-links ul li a {
-  color: #ffffff;
+  color: #00bfff;
   text-decoration: none;
 }
 
