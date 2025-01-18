@@ -2,7 +2,7 @@ import React from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import EventSlideshow from "../components/EventSlideshow";
 import "../styles/Home.css";
-import coachPhoto from "C:/Users/Sohum Srivastava/Desktop/afsacademy/afsacademy/src/media/coach_photo.jpg";
+import coachPhoto from "../media/coach_photo.jpg";
 
 const events = [
   { title: "Basketball Workshop", date: "2025-01-15", link: "https://forms.gle/example" },

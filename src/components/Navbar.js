@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Use Link for navigation
 import "../styles/Navbar.css";
-import logo from "C:/Users/Sohum Srivastava/Desktop/afsacademy/afsacademy/src/media/logo.jpg";
+import logo from "../media/logo.jpg";
 
 const Navbar = ({ toggleTheme, theme }) => {
   return (
