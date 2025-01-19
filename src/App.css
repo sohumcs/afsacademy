@@ -3,28 +3,18 @@
   --primary-color: #005AAA; /* Blue */
   --secondary-color: #ffffff; /* White */
   --text-color: #000000; /* Black */
-  --background-color: #005AAA; /* Light gray */
+  --background-color: #ffffff; /* White background */
   --button-hover-color: #004080; /* Darker blue for hover */
   --card-shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow for cards */
   --footer-background-color: #e0e0e0; /* Light gray for footer */
-}
-
-/* Dark Mode */
-.dark-mode {
-  --primary-color: #ffffff; /* White */
-  --secondary-color: #1a1a1a; /* Dark gray */
-  --text-color: #ffffff; /* White */
-  --background-color: #005AAA; /* Blue background */
-  --button-hover-color: #008cff; /* Brighter blue for hover */
-  --card-shadow-color: rgba(255, 255, 255, 0.1); /* Light shadow for cards */
-  --footer-background-color: #003366; /* Darker blue for footer */
 }
 
 /* Global Styles */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: var(--background-color);
+  background: url('./media/bg-basketball.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -57,7 +47,7 @@ button:hover {
 
 /* Navbar Styling */
 header, nav {
-  background-color: var(--secondary-color);
+  background-color: #000000;
   color: var(--text-color);
   padding: 1rem;
   display: flex;
@@ -65,5 +55,4 @@ header, nav {
   align-items: center;
   box-shadow: 0 2px 4px var(--card-shadow-color);
 }
-
 
