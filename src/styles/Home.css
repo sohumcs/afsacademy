@@ -3,7 +3,6 @@
 .home-container {
   font-family: Arial, sans-serif;
   color: #ffffff;
-  background: linear-gradient(135deg, #001f3f, #003366); /* Blue to Black Gradient Background */
   padding-top: 80px; /* Adjust this value based on your navbar height */
   overflow: visible; /* Allow children to render fully */
   position: relative; /* Set for proper stacking of child elements */
@@ -13,8 +12,7 @@
 .quote-section {
   display: flex;
   align-items: center;
-  padding: 40px;
-  background-color: #00274d; /* Dark Blue Background */
+  padding: 40px; /* Dark Blue Background */
   border-radius: 10px;
   margin: 20px;
 }
@@ -48,7 +46,6 @@
 .collaborations-section {
   text-align: center;
   padding: 40px;
-  background: linear-gradient(135deg, #001f3f, #004080); /* Blue Gradient */
 }
 
 .collaborations-section h3 {
@@ -63,7 +60,6 @@
 }
 
 .collab-item {
-  background-color: #003366; /* Darker Blue Background */
   color: #ffffff;
   padding: 20px;
   border-radius: 10px;
@@ -75,7 +71,6 @@
 /* Location Section */
 .location-section {
   padding: 40px;
-  background-color: #00274d;
   border-radius: 10px;
   margin: 20px;
 }
@@ -105,7 +100,6 @@
 
 .address-container {
   flex: 1;
-  background-color: #001f3f;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -126,7 +120,6 @@
 }
 /* Personalized Training Section */
 .training-section {
-  background: linear-gradient(135deg, #00274d, #004080); /* Blue Gradient */
   color: #d0e7ff;
   padding: 40px;
   border-radius: 10px;
