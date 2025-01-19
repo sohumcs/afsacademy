@@ -1,60 +1,81 @@
+/* General Layout */
 .slideshow-container {
-  height: 500px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  height: 500px; /* Increased height */
   overflow: hidden;
-    margin-bottom: 50px; /* Add spacing below */
-      z-index: 1; /* Lower than navbar */
-    
-  
+  /* Removed background to use the website's background */
 }
 
 .slideshow {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   width: 100%;
   height: 100%;
 }
 
 .slide {
   position: absolute;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  width: 60%; /* Central slide width */
+  width: 50%; /* Adjusted the size to make slides smaller */
+  height: 80%; /* Increased the height of the slide */
+  transition: transform 0.6s ease, opacity 0.6s ease;
   opacity: 0;
-  transform: scale(0.8) translateX(100%);
+  transform: scale(0.7); /* Default hidden scale */
+  pointer-events: none; /* Avoid clicks on non-active slides */
 }
 
+/* Center (Active) Slide */
 .slide.current {
   opacity: 1;
-  transform: scale(1) translateX(0);
+  transform: scale(1);
   z-index: 3;
+  pointer-events: auto; /* Allow interaction with the active slide */
 }
 
+/* Previous Slide */
 .slide.previous {
-  opacity: 0.6;
-  transform: scale(0.8) translateX(-100%);
+  opacity: 0.8;
+  transform: scale(0.8) translateX(-100%); /* Shift left */
   z-index: 2;
 }
 
+/* Next Slide */
 .slide.next {
-  opacity: 0.6;
-  transform: scale(0.8) translateX(100%);
+  opacity: 0.8;
+  transform: scale(0.8) translateX(100%); /* Shift right */
   z-index: 2;
 }
 
+/* Hidden Slides */
+.slide.hidden {
+  display: none;
+}
+
+/* Video and Image Styles */
 .video-slide,
 .image-slide {
   width: 100%;
-  height: auto;
+  height: 100%; /* Increased height for video */
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+  object-fit: cover; /* Ensure proper fit for videos/images */
 }
 
+/* Dim the Previous/Next Slides */
+.previous .video-slide,
+.next .video-slide {
+  filter: brightness(0.6); /* Slightly dim inactive videos */
+}
+
+.previous:hover .video-slide,
+.next:hover .video-slide {
+  filter: brightness(1); /* Brighten on hover */
+}
+
+/* Navigation Buttons */
 .slide-control {
   position: absolute;
   top: 50%;
