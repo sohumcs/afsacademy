@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/EventSlideshow.css";
-import eventVideo1 from "../media/WhatsApp Video 2025-01-06 at 22.16.11_2ea6aec4.mp4";
-import eventVideo2 from "../media/basketballssss_p3.mp4";
-import eventVideo3 from "../media/basketballssss.mp4";
-import eventVideo4 from "../media/basketballssss_2.mp4"; // New Video
-import eventImage from "../media/WhatsApp Image 2025-01-06 at 22.06.47_db40da2b.jpg";
+import eventVideo1 from "../media/basketballssss.mp4";
+import eventVideo2 from "../media/basketballssss_2.mp4";
+import eventVideo3 from "../media/basketballssss_p3.mp4";
+import eventPhoto1 from "../media/WhatsApp Image 2025-01-06 at 22.06.47_db40da2b.jpg";
+import eventVideo4 from "../media/WhatsApp Video 2025-01-06 at 22.16.11_2ea6aec4.mp4";
 
 const EventSlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,11 +12,24 @@ const EventSlideshow = () => {
 
   const slides = [
     { type: "video", src: eventVideo1 },
-    { type: "image", src: eventImage },
     { type: "video", src: eventVideo2 },
     { type: "video", src: eventVideo3 },
+    { type: "image", src: eventPhoto1 },
     { type: "video", src: eventVideo4 },
   ];
+
+  // Auto-play the current video and transition to next
+  useEffect(() => {
+    const currentVideo = videoRefs.current[currentSlide];
+    if (currentVideo && currentVideo.play) {
+      currentVideo.play();
+      const handleVideoEnd = () => handleNextSlide();
+      currentVideo.addEventListener("ended", handleVideoEnd);
+      return () => {
+        currentVideo.removeEventListener("ended", handleVideoEnd);
+      };
+    }
+  }, [currentSlide]);
 
   // Move to the next slide
   const handleNextSlide = () => {
@@ -28,28 +41,10 @@ const EventSlideshow = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  // Handle video end event
-  useEffect(() => {
-    if (slides[currentSlide].type === "video") {
-      const video = videoRefs.current[currentSlide];
-      if (video) {
-        video.play();
-        const onVideoEnd = () => handleNextSlide();
-        video.addEventListener("ended", onVideoEnd);
-        return () => video.removeEventListener("ended", onVideoEnd);
-      }
-    } else {
-      const imageDuration = 5000; // Show image for 5 seconds
-      const timer = setTimeout(handleNextSlide, imageDuration);
-      return () => clearTimeout(timer);
-    }
-  }, [currentSlide, slides]);
-
   return (
     <div className="slideshow-container">
       <div className="slideshow">
         {slides.map((slide, index) => {
-          // Determine the slide position
           const position =
             index === currentSlide
               ? "current"
@@ -61,23 +56,28 @@ const EventSlideshow = () => {
 
           return (
             <div key={index} className={`slide ${position}`}>
-              {slide.type === "video" ? (
+              {slide.type === "video" && (
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
-                  muted
+                  muted={index !== currentSlide}
                   className="video-slide"
                 >
                   <source src={slide.src} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-              ) : (
-                <img src={slide.src} alt={`Slide ${index}`} className="image-slide" />
+              )}
+              {slide.type === "image" && (
+                <img
+                  src={slide.src}
+                  alt={`Slide ${index}`}
+                  className="image-slide"
+                />
               )}
             </div>
           );
         })}
 
-        {/* Navigation */}
+        {/* Navigation Buttons */}
         <button
           className="slide-control previous"
           onClick={handlePrevSlide}

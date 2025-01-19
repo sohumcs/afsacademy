@@ -5,6 +5,8 @@
   color: #ffffff;
   background: linear-gradient(135deg, #001f3f, #003366); /* Blue to Black Gradient Background */
   padding-top: 80px; /* Adjust this value based on your navbar height */
+  overflow: visible; /* Allow children to render fully */
+  position: relative; /* Set for proper stacking of child elements */
 }
 
 /* Quote Section */

@@ -64,7 +64,7 @@ const Home = () => {
   return (
     <div className="home-container">
       {/* Event Slideshow */}
-      <EventSlideshow events={events} />
+      <EventSlideshow />
 
       {/* Inspirational Quote Section */}
       <section className="quote-section">
